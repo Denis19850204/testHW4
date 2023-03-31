@@ -4,6 +4,7 @@
   --main-color: #757575;
   --second-color: #212121;
   --white-color: #ffffff;
+  --icon-color: #afb1b8;
 }
 
 /* Закальні стилі */
@@ -12,6 +13,10 @@ body {
   color: var(--main-color);
 
   font-family: Roboto, sans-serif;
+}
+
+.section {
+  padding: 94px 0;
 }
 
 img {
@@ -113,6 +118,7 @@ ul {
 .auth-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 
   font-weight: 500;
   font-size: 14px;
@@ -125,9 +131,11 @@ ul {
 }
 
 .auth-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  align-items: center;
 
   color: inherit;
 }
@@ -137,10 +145,38 @@ ul {
   color: var(--brand-color);
 }
 
+.auth-icon {
+  fill: var(--main-color);
+
+  margin-right: 10px;
+}
+
+.auth-link:hover .auth-icon {
+  fill: var(--brand-color);
+}
+
+.auth-link:focus .auth-icon {
+  fill: var(--brand-color);
+}
+
 /* Основна секція */
 
 .hero {
   background-color: #2f303a;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main/main.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 
   padding-top: 200px;
   padding-bottom: 200px;
@@ -185,9 +221,9 @@ ul {
 
 /* Секція переваги */
 
-.benefits {
+/* .benefits {
   padding: 94px 0;
-}
+} */
 
 .benefits-title {
   visibility: hidden;
@@ -203,6 +239,18 @@ ul {
 
 .benefits-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.benefits-icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f5f4fa;
+
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
 }
 
 .benefits-subtitle {
@@ -223,10 +271,6 @@ ul {
 
 /* Секція робота */
 
-.work {
-  padding: 94px 0;
-}
-
 .work-list {
   display: flex;
   justify-content: space-between;
@@ -245,7 +289,7 @@ ul {
 /* Секція наша команда */
 
 .team {
-  padding: 94px 0;
+  background: #f5f4fa;
 }
 
 .team-title {
@@ -268,6 +312,7 @@ ul {
 
   text-align: center;
   box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 4px;
 }
 
 .team-photo {
@@ -288,6 +333,80 @@ ul {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  margin-bottom: 16px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--brand-color);
+}
+
+.team-social-icon {
+  fill: var(--icon-color);
+}
+
+.team-social-link:hover .team-social-icon {
+  fill: var(--white-color);
+}
+
+.team-social-link:focus .team-social-icon {
+  fill: var(--white-color);
+}
+
+/* Секція Постійні клієнти */
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+
+  color: var(--icon-color);
+
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--brand-color);
 }
 
 /* Футер */
@@ -296,6 +415,15 @@ ul {
   padding: 60px 0;
 
   background-color: #2f303a;
+}
+
+.footer-block {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-block-address {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -339,6 +467,48 @@ ul {
 
 .footer-mail {
   margin-bottom: 6px;
+}
+
+.footer-block-social-text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}
+
+.footer-block-social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-block-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-block-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: #ffffff1a;
+  color: var(--white-color);
+}
+
+.footer-block-social-link:hover,
+.footer-block-social-link:focus {
+  background-color: var(--brand-color);
+}
+
+.footer-block-social-icon {
+  fill: currentColor;
 }
 
 /* ------------------------------------------------------------ */
@@ -396,6 +566,12 @@ ul {
 
 .project-link {
   display: inline-block;
+  
+}
+
+.project-link:hover,
+.project-link:focus{
+box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .project-info {
