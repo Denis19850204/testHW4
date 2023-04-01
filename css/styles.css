@@ -221,10 +221,6 @@ ul {
 
 /* Секція переваги */
 
-/* .benefits {
-  padding: 94px 0;
-} */
-
 .benefits-title {
   visibility: hidden;
 }
@@ -566,12 +562,11 @@ ul {
 
 .project-link {
   display: inline-block;
-  
 }
 
 .project-link:hover,
-.project-link:focus{
-box-shadow: 0px 4px 4px 0px #00000040;
+.project-link:focus {
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .project-info {
